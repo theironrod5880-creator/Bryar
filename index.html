@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Bryar 1.0 — Live Room</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">YOUR ROOM, YOUR RULES</p>
+      <h1>Bryar <span>1.0</span></h1>
+    </div>
+    <span class="status"><i></i> Demo mode</span>
+  </header>
+
+  <main class="layout">
+    <section class="room panel">
+      <div class="room-heading">
+        <div>
+          <p class="eyebrow">MULTI-PERSON CHAT</p>
+          <h2>The Common Room</h2>
+          <p class="muted">People and Bryar, in one place.</p>
+        </div>
+        <button id="inviteBtn" class="secondary">Invite</button>
+      </div>
+
+      <div class="call-controls">
+        <button id="cameraBtn" class="secondary">Turn camera on</button>
+        <button id="micBtn" class="secondary">Turn microphone on</button>
+      </div>
+      <video id="localVideo" autoplay muted playsinline hidden></video>
+
+      <div class="messages" id="messages" aria-live="polite">
+        <article class="message bryar">
+          <div class="avatar">B</div>
+          <div><p class="speaker">Bryar 1.0 <span>AI companion · demo</span></p>
+          <p>Welcome. I can help keep the conversation organized. Real chat and AI connections still need to be configured.</p></div>
+        </article>
+        <article class="message">
+          <div class="avatar person">Y</div>
+          <div><p class="speaker">You <span>local demo</span></p>
+          <p>This is the beginning of our room.</p></div>
+        </article>
+      </div>
+
+      <form id="chatForm" class="composer">
+        <label class="sr-only" for="messageInput">Write a message</label>
+        <input id="messageInput" placeholder="Write a message…" autocomplete="off" required>
+        <button type="submit">Send</button>
+      </form>
+      <p class="note">Demo only: messages stay in this browser and are not sent to other people.</p>
+    </section>
+
+    <aside class="sidebar">
+      <section class="panel">
+        <p class="eyebrow">IN THIS ROOM</p>
+        <h3>Participants</h3>
+        <div class="participant"><span class="avatar person">Y</span><span>You</span><span class="online">Here</span></div>
+        <div class="participant"><span class="avatar">B</span><span>Bryar 1.0</span><span class="online">Demo</span></div>
+        <p class="muted small">Real participants will appear after accounts and live messaging are connected.</p>
+      </section>
+      <section class="panel ad-panel">
+        <p class="eyebrow">SPONSORED SPACE</p>
+        <h3>Advertisement area</h3>
+        <p class="muted">A clearly labeled place for future ads. No ad provider is connected.</p>
+      </section>
+      <section class="panel floor">
+        <p class="eyebrow">FOUNDATION</p>
+        <h3>The moral floor</h3>
+        <ul>
+          <li>Be clear about what is known and unknown.</li>
+          <li>Do not invent facts or sources.</li>
+          <li>Protect private information.</li>
+          <li>Keep the owner in control of publication.</li>
+        </ul>
+        <p class="muted small">Starter principles only. Review and approve the full rules before launch.</p>
+      </section>
+    </aside>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
