@@ -1,0 +1,8 @@
+{
+  "name": "bryar-1-0-starter-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal server starter for Bryar 1.0",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" }
+}
